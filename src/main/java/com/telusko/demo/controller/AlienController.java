@@ -3,6 +3,7 @@ package com.telusko.demo.controller;
 import com.telusko.demo.dao.AlienRepo;
 import com.telusko.demo.model.Alien;
 import com.telusko.demo.service.AlienService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ public class AlienController   {
     @Autowired
     private AlienService service;
 
+    @ApiOperation("Showing main dashboard")
     @GetMapping("/dashboard")
     public String home(){
         return "home";
