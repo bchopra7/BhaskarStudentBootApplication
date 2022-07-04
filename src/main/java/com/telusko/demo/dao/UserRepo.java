@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepo extends JpaRepository<Userlogin,Integer> {
-    @Query("from Userlogin where user_email=?1 and user_pass=?2")
+    @Query("from Userlogin where user_email=?1 or user_pass=?2")
     public Userlogin findByUsernamePassword(String username, String password);
 }
